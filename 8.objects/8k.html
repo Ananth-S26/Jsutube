@@ -1,0 +1,24 @@
+<script>
+    let guess;
+    score={
+        wins:0,
+        losses:0
+    };
+    function playGame(guess){
+        let randomNumber=Math.random();
+        let result=randomNumber<0.5?'heads':'tails';
+        let r=guess===result?'You win!':'You lose!';
+        if(r==='You win!'){
+            score.wins+=1;
+        }
+        else{
+            score.losses+=1;
+        }
+        localStorage.setItem('score',JSON.stringify(score));
+        console.log(`${r},wins ${score.wins},losses ${score.losses}`);
+    }
+</script>
+<body>
+    <button onclick="playGame('heads');">heads</button>
+    <button onclick="playGame( 'tails');">tails</button>
+</body>
