@@ -1,0 +1,13 @@
+.a{
+    padding: 15px;
+    color: rgb(212, 212, 212);;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.is-toggled{
+    color: black;
+    background-color: rgb(212, 212, 212);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Html Css Js
+        </title>
+        <style>
+            .a{
+                padding: 15px;
+                color: rgb(212, 212, 212);;
+                background-color: black;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 20px;
+            }
+            .is-toggled{
+                color: black;
+                background-color: rgb(212, 212, 212);
+            }
+        </style>
+    </head>
+    <body>
+        <button class="a" onclick="onOff(this);">Gaming</button>
+        <button class="a" onclick="onOff(this);">Music</button>
+        <button class="a" onclick="onOff(this);">Tech</button>
+        <script>
+            function onOff(buttonElement){
+            
+            if(buttonElement.classList.contains('is-toggled')){
+                buttonElement.classList.remove('is-toggled');
+            }
+            else{
+                buttonElement.classList.add('is-toggled');
+            }
+        }
+        </script>
+    </body>
+</html>
