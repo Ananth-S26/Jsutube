@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lesson 9 DOM
+        </title>
+    </head>
+    <body>
+        <button  onclick="display('heads');">heads</button>
+        <button  onclick="display('tails');">tails</button>
+        <p class="a"></p>
+        <script>
+            function display(text){
+                document.querySelector('.a').innerHTML=`You chose ${text}`;
+            }
+        </script>
+    </body>
+</html>

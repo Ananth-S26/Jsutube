@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lesson 9 DOM
+        </title>
+    </head>
+    <body>
+        <input class="value" onkeydown="enterKey(event);">
+        <button  onclick="display();">Sumbit</button>
+        <p class="a"></p>
+        <script>
+            function display(){
+                const inputElement=document.querySelector('.value');
+                let text=inputElement.value;
+                document.querySelector('.a').innerHTML=`Your name is: ${text}`;
+            }
+            function enterKey(event){
+                if(event.key==='Enter'){
+                    display();
+                }
+            }
+        </script>
+    </body>
+</html>

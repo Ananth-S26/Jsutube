@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lesson 9 DOM
+        </title>
+    </head>
+    <body>
+        <input class="value">
+        <button  onclick="display();">Sumbit</button>
+        <p class="a"></p>
+        <script>
+            function display(){
+                const inputElement=document.querySelector('.value');
+                let text=inputElement.value;
+                document.querySelector('.a').innerHTML=`Your name is: ${text}`;
+            }
+        </script>
+    </body>
+</html>

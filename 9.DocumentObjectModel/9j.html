@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+</head>
+<script>
+    
+    let calculation = localStorage.getItem('savedCalculation') || '';
+    
+    function updateCalculation(cal) {
+        calculation = cal;
+        display();
+        localStorage.setItem('savedCalculation', calculation);
+    }
+    
+    
+    function handleButtonClick(value) {
+        calculation += value;
+        console.log(calculation);
+        display();
+        localStorage.setItem('savedCalculation', calculation);
+    }
+    
+    
+    function clearCalculation() {
+        calculation = '';
+        console.log('cleared!..');
+        display();
+        localStorage.removeItem('savedCalculation');
+    }
+    function display(){
+        document.querySelector('.b').innerHTML=`${calculation}`;
+    }
+</script>
+<body>
+    <p>
+        <button onclick="handleButtonClick('1')">1</button>
+        <button onclick="handleButtonClick('2')">2</button>
+        <button onclick="handleButtonClick('3')">3</button>
+        <button onclick="handleButtonClick('+')">+</button>
+    </p>  
+    <p>
+        <button onclick="handleButtonClick('4')">4</button>
+        <button onclick="handleButtonClick('5')">5</button>
+        <button onclick="handleButtonClick('6')">6</button>
+        <button onclick="handleButtonClick('-')">-</button>
+    </p>  
+    <p>
+        <button onclick="handleButtonClick('7')">7</button>
+        <button onclick="handleButtonClick('8')">8</button>
+        <button onclick="handleButtonClick('9')">9</button>
+        <button onclick="handleButtonClick('*')">*</button>
+    </p> 
+    <p>
+        <button onclick="handleButtonClick('0')">0</button>
+        <button onclick="handleButtonClick('.')">.</button>
+        <button onclick="updateCalculation(eval(calculation)); console.log(eval(calculation))">=</button>
+        <button onclick="handleButtonClick('/')">/</button>
+    </p>   
+    <p>
+        <button onclick="clearCalculation()">clear</button>
+    </p>
+    <p class="b"></p>
+</body>

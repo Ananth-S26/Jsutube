@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Lesson 9 DOM
+    </title>
+    <body>
+        <input class="a" placeholder="Type something" onkeyup="display();">
+        <p class="b"></p>
+        <script>
+            function display(){
+                let textElement=document.querySelector('.a');
+                let text=textElement.value;
+                document.querySelector('.b').innerHTML=`${text}`;
+            }
+        </script>
+    </body>
+</head>
